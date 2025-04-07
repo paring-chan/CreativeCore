@@ -3,6 +3,7 @@ package team.creative.creativecore.common.gui.control.parent;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import team.creative.creativecore.common.gui.Align;
 import team.creative.creativecore.common.gui.GuiParent;
@@ -57,6 +58,9 @@ public class GuiTabs extends GuiParent {
         index = select;
         selected = tabs.get(select);
         bar.highlight(select);
+
+        add(selected);
+
         if (lastHeight == -1 && getParent() != null)
             reflow();
         else {
@@ -159,6 +163,5 @@ public class GuiTabs extends GuiParent {
         protected int preferredHeightOriginal(int width, int availableHeight) {
             return super.preferredHeight(width, availableHeight);
         }
-        
     }
 }

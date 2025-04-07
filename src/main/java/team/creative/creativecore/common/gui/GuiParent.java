@@ -7,6 +7,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.world.entity.vehicle.MinecartFurnace;
 import org.apache.commons.lang3.ArrayUtils;
 
 import com.mojang.blaze3d.systems.RenderSystem;

@@ -77,7 +77,8 @@ public interface IGuiIntegratedParent extends IGuiParent {
             
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
             Rect controlRect = new Rect(offX, offY, offX + layer.getWidth(), offY + layer.getHeight());
-            layer.render(graphics, controlRect, screenRect.intersection(controlRect), 1, mouseX, mouseY);
+            var realRect = screenRect.intersection(controlRect);
+            layer.render(graphics, controlRect, realRect, 1, mouseX, mouseY);
             pose.popPose();
             
             RenderSystem.disableScissor();
